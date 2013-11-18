@@ -57,6 +57,10 @@ body .container ul.carousel {
 body .container .uppercase {
   text-transform: uppercase;
 }
+body .container a {
+  text-decoration: underline;
+  color: #c0c0c0;
+}
 body .container div.news {
   margin-top: 15px;
   background-color: #efefef;
@@ -219,6 +223,10 @@ body .container ul.carousel {
 }
 body .container .uppercase {
   text-transform: uppercase;
+}
+body .container a {
+  text-decoration: underline;
+  color: #c0c0c0;
 }
 body .container div.news {
   margin-top: 15px;
