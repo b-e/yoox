@@ -2,11 +2,14 @@
 
 button.news-button {
   float: right;
-  background-color: #535353;
   color: #ffffff;
   border: none;
   padding: 5px 10px 5px 10px;
   margin-bottom:10px;
+  background: url(../images/up-arrow-white.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #535353;
 }
 
 ul.proposals {
@@ -23,14 +26,17 @@ ul.proposals {
   height: @button-height;
   line-height: @button-height;
   width: 100%;
-  background-color: @gray-background;
   border: none;
   border-bottom: 1px solid #c5c5c5;
   color: #353535;
-  .titles;
+  font-size: 20px;
   padding: 0 0 0 3%;
   text-align: left;
   cursor: pointer;
+  background: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: @gray-background;
 }
 
 .selected {

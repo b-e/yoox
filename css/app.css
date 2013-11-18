@@ -7,7 +7,7 @@
   src: url(../fonts/KNOCK49L.TTF);
 }
 .titles {
-  font-family: knock-text;
+  font-family: knock-title;
   font-size: 20px;
 }
 body {
@@ -139,7 +139,7 @@ body .container div.contactus {
   margin-top: 20px;
 }
 body .container div.contactus p.title {
-  font-family: knock-text;
+  font-family: knock-title;
   font-size: 20px;
   margin: 0 !important;
 }
@@ -306,7 +306,7 @@ body .container div.contactus {
   margin-top: 20px;
 }
 body .container div.contactus p.title {
-  font-family: knock-text;
+  font-family: knock-title;
   font-size: 20px;
   margin: 0 !important;
 }
@@ -346,11 +346,14 @@ body .container .copyright {
 }
 button.news-button {
   float: right;
-  background-color: #535353;
   color: #ffffff;
   border: none;
   padding: 5px 10px 5px 10px;
   margin-bottom: 10px;
+  background: url(../images/up-arrow-white.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #535353;
 }
 ul.proposals {
   list-style: none;
@@ -364,15 +367,17 @@ ul.proposals li:first-child {
   height: 50px;
   line-height: 50px;
   width: 100%;
-  background-color: #efefef;
   border: none;
   border-bottom: 1px solid #c5c5c5;
   color: #353535;
-  font-family: knock-text;
   font-size: 20px;
   padding: 0 0 0 3%;
   text-align: left;
   cursor: pointer;
+  background: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #efefef;
 }
 .selected {
   background-color: #ffffff;
