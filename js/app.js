@@ -1,3 +1,4 @@
+//contact form validation
 $('#contact').isHappy({
     fields: {
         '#name': {
@@ -7,6 +8,7 @@ $('#contact').isHappy({
         '#email': {
             required: true,
             test: function(mail) {
+                //regular expression for email, avoiding polyfill intervention to validate html5 email type
                 var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 return re.test(mail);
             },
@@ -23,11 +25,13 @@ $('#contact').isHappy({
 });
 
 $(document).ready(function () {
+    //top carousel
     $('.carousel').bxSlider({
         pager: false,
         adaptiveHeight: true
     });
 
+    //hide news section on click
     $('.news-button').click(function(e) {
         $.each($('.news div.row'), function(i, row) {
             if (i != 0) {
@@ -39,6 +43,7 @@ $(document).ready(function () {
         $('.title-row').removeClass('up-arrow').addClass('down-arrow');
     });
 
+    //show/hide news section on click
     $('.title-row').click(function(e){
         $.each($('.news div.row'), function(i, row) {
             if (i != 0) {
@@ -56,8 +61,10 @@ $(document).ready(function () {
     })
 
     var slider;
+    //array that is going to contain the images retrieved from the getjson call
     var fancyboxArray = [];
 
+    //get json files for the one/two/three/four section and populate the div
     var apiCall = function(id, reload) {
         $.getJSON("data/"+id+".json", function(data) {
             $('ul.presentation-slider').html("");
@@ -69,6 +76,7 @@ $(document).ready(function () {
                 fancyboxArray.push({href: image});
             });
 
+            //show the images in overlay onclick
             $('ul.presentation-slider li img').click(function(e) {
                 $.fancybox.open(fancyboxArray);
             });
@@ -94,7 +102,7 @@ $(document).ready(function () {
 
     apiCall("one", false);
 
-
+    //onclick handler for the one/two/three/four section
     $('ul.proposals').click(function(e) {
         $('ul.proposals li').removeClass("selected");
         var target = e.target;
